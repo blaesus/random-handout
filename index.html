@@ -1,4 +1,10 @@
 <style>
+
+    body {
+        position: relative;
+        height: 100vh;
+    }
+
     .bar {
         display: inline-block;
         width: 10px;
@@ -8,9 +14,23 @@
 
     .canvas {
         position: absolute;
+        height: 80vh;
         bottom: 0;
     }
+
+    .canvas div {
+        position: absolute;
+        bottom: 0;
+        background: black;
+        width: 9vw;
+        display: inline-block;
+        transition: background 0.2s;
+    }
 </style>
+<div class='control'>
+    <Button class='start' autofocus>Start</Button>
+    <Button class='pause'>Pause</Button>
+</div>
 <div class='clock'></div>
 <div class='canvas'></div>
 <script src='./main.js'></script>
