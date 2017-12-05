@@ -22,7 +22,10 @@ function render(ledger, donor, recipient, day) {
     const divs = [].slice.call(document.querySelectorAll('.canvas div'))
     ledger.forEach((fund, index) => {
         divs[index].style.height = fund / (initialFund * heightMultiplier) * 100 + '%'
-        divs[index].style.background = index === donor ? 'red' : index === recipient ? 'green' : 'black'
+        divs[index].style.background = index === donor
+                                            ? 'rgba(255, 0, 0, 0.5)'
+                                            : index === recipient
+                                                ? 'rgba(0, 255, 0, 0.5)' : ''
     })
 }
 
