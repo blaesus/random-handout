@@ -1,0 +1,37 @@
+<style>
+
+    body {
+        position: relative;
+        height: 100vh;
+    }
+
+    .bar {
+        display: inline-block;
+        width: 10px;
+        background: black;
+        margin: 1px 3px;
+    }
+
+    .canvas {
+        position: absolute;
+        height: 80vh;
+        bottom: 0;
+    }
+
+    .canvas div {
+        position: absolute;
+        bottom: 0;
+        background: white;
+        border: 1px solid black;
+        width: 9vw;
+        display: inline-block;
+        transition: background 0.5s, height 0.2s ease-in;
+    }
+</style>
+<div class='control'>
+    <Button class='start' autofocus>Start</Button>
+    <Button class='pause'>Pause</Button>
+</div>
+<div class='clock'></div>
+<div class='canvas'></div>
+<script src='./main.js'></script>
